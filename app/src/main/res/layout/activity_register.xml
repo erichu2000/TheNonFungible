@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_start_color"
-    tools:context=".View.LoginActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".View.RegisterActivity">
 
 
     <LinearLayout
@@ -18,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Register"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/teal_700"
@@ -32,12 +33,11 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etLoginEmail"
+                android:id="@+id/etRegEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColorHint="#fffed3" />
+                android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -48,7 +48,7 @@
             android:layout_marginTop="12dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etLoginPass"
+                android:id="@+id/etRegPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -56,13 +56,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:textColor="@color/teal_700"
             app:backgroundTint="#fefed3"
-            android:text="Login" />
+            android:textColor="@color/black"
+            android:text="Register"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,15 +74,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Not registered yet"
+                android:text="Already registered"
                 android:textSize="16sp"/>
 
             <TextView
-                android:id="@+id/tvRegisterHere"
+                android:id="@+id/tvLoginHere"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text="Register here"
+                android:text="Login here"
                 android:textColor="@color/teal_700"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
@@ -91,5 +91,8 @@
 
     </LinearLayout>
 
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "931619794928",
+    "project_id": "the-non-fungible",
+    "storage_bucket": "the-non-fungible.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931619794928:android:1a3a2b56c51312f7513735",
+        "android_client_info": {
+          "package_name": "com.example.thenonfungible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931619794928-j2lnuud7ajfurrn1t3lkc4te9rm5jin6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ2uNBRPRe5NO8WgZIVQpc9MMnVGCnRMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931619794928-j2lnuud7ajfurrn1t3lkc4te9rm5jin6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
