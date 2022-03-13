@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TheNonFungible">
-
+        <activity
+            android:name=".View.bottomNaviActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_navi" />
         <activity
             android:name=".View.LoginActivity"
             android:exported="false" />
