@@ -3,8 +3,28 @@ package com.example.thenonfungible.Model;
 public class Good {
     private int id;
     private String name;
+
+    public Integer getImageResource() {
+        return imageResource;
+    }
+
+    public void setImageResource(Integer imageResource) {
+        this.imageResource = imageResource;
+    }
+
+    private Integer imageResource;
     private double currentPrice;
     private double previousPrice;
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    private User owner;
     //private image image;
 
     public void setId(int id) {

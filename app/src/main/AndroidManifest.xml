@@ -16,14 +16,26 @@
         <activity
             android:name=".View.RegisterActivity"
             android:exported="false" />
-        <activity
-            android:name=".View.SplashActivity"
+        <activity android:name=".View.UserProfileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".View.InventoryActivity"
+            android:exported="false" />
+        <activity android:name=".View.MarketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.SplashActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 
