@@ -1,4 +1,4 @@
-package com.example.thenonfungible.View.ui.dashboard;
+package com.example.thenonfungible.View.ui.me;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
