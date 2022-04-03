@@ -19,12 +19,14 @@
         <activity
             android:name=".View.RegisterActivity"
             android:exported="false" />
-        <activity android:name=".View.UserProfileActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".View.InventoryActivity"
+        <activity
+            android:name=".View.UserProfileActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".View.InventoryActivity"
             android:exported="false" />
-        <activity android:name=".View.MarketActivity"
+        <activity
+            android:name=".View.MarketActivity"
             android:exported="false" />
         <activity
             android:name=".View.SplashActivity"

@@ -13,4 +13,5 @@
     <string name="title_home">Market</string>
     <string name="title_dashboard">Me</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>
