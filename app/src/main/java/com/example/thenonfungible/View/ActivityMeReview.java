@@ -1,4 +1,4 @@
 package com.example.thenonfungible.View;
 
-public class categoryActivity {
+public class ActivityMeReview {
 }

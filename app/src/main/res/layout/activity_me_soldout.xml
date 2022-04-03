@@ -46,7 +46,7 @@
         android:layout_width="346dp"
         android:layout_height="367dp"
         app:srcCompat="@drawable/profilesample"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <View

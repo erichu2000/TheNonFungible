@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.thenonfungible.View.Fragments.HomeFragment"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/me"
+        android:name="com.example.thenonfungible.View.Fragments.MeFragment"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me" />
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.example.thenonfungible.View.Fragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/category"
+        android:name="com.example.thenonfungible.View.Fragments.CategoryFragment"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_category" />
+</navigation>

@@ -1,4 +1,4 @@
 package com.example.thenonfungible.View;
 
-public class homeActivity {
+public class HomeActivity {
 }
