@@ -12,57 +12,40 @@
         android:background="?android:attr/listDivider"
         android:visibility="visible"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="652dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="60dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/categoryUnselected"
-        tools:layout_editor_absoluteX="123dp" />
+        tools:layout_editor_absoluteY="688dp" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="71dp"
-        android:layout_height="62dp"
+        android:layout_width="79dp"
+        android:layout_height="68dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/MeUnselected"
-        tools:layout_editor_absoluteX="313dp" />
+        app:srcCompat="@drawable/meunselected"
+        tools:layout_editor_absoluteX="305dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="62dp"
-        android:layout_height="59dp"
-        app:srcCompat="@drawable/homeUnselected"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="663dp" />
+        android:id="@+id/imageView17"
+        android:layout_width="64dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/homeunselected"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="709dp" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/messageSelected"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="663dp" />
+        android:id="@+id/imageView24"
+        android:layout_width="77dp"
+        android:layout_height="72dp"
+        app:srcCompat="@drawable/categoryunselected"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="709dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selling"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="93dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buying"
-        tools:layout_editor_absoluteX="223dp"
-        tools:layout_editor_absoluteY="93dp" />
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="80dp"
+        android:layout_height="78dp"
+        app:srcCompat="@drawable/messageselected"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="703dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

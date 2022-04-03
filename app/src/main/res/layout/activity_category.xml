@@ -12,7 +12,7 @@
         android:background="?android:attr/listDivider"
         android:visibility="visible"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="652dp" />
+        tools:layout_editor_absoluteY="688dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -20,8 +20,8 @@
         android:layout_height="62dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/MessageUnselected"
-        tools:layout_editor_absoluteX="218dp" />
+        app:srcCompat="@drawable/messageunselected"
+        tools:layout_editor_absoluteX="220dp" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -29,64 +29,64 @@
         android:layout_height="62dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/MeUnselected"
+        app:srcCompat="@drawable/meunselected"
         tools:layout_editor_absoluteX="313dp" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="70dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/CategorySelected"
-        tools:layout_editor_absoluteX="114dp" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="68dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/homeUnselected"
-        tools:layout_editor_absoluteX="18dp" />
-
-    <SearchView
-        android:layout_width="128dp"
-        android:layout_height="123dp"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="28dp" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/clothesCategory"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="174dp" />
-
-    <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/shoesCategory"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="174dp" />
+        android:layout_width="64dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/homeunselected"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="709dp" />
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/categoryCharacter"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="381dp" />
+        android:layout_width="74dp"
+        android:layout_height="81dp"
+        app:srcCompat="@drawable/categoryselected"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="699dp" />
 
     <ImageView
         android:id="@+id/imageView19"
+        android:layout_width="109dp"
+        android:layout_height="119dp"
+        app:srcCompat="@drawable/clothes"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="111dp"
+        android:layout_height="117dp"
+        app:srcCompat="@drawable/character"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <ImageView
+        android:id="@+id/imageView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/collectibleCategory"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:srcCompat="@drawable/shoes"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/collectible"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/homesearchbar"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="98dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:background="?android:attr/listDivider"
         android:visibility="visible"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="652dp" />
+        tools:layout_editor_absoluteY="688dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/homeSelected"
+        app:srcCompat="@drawable/homeselected"
         tools:layout_editor_absoluteX="27dp" />
 
     <ImageView
@@ -31,7 +31,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:srcCompat="@drawable/categoryUnselected" />
+        app:srcCompat="@drawable/categoryunselected" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -41,7 +41,7 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:srcCompat="@drawable/MessageUnselected" />
+        app:srcCompat="@drawable/messageunselected" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -49,7 +49,7 @@
         android:layout_height="62dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/MeUnselected"
+        app:srcCompat="@drawable/meunselected"
         tools:layout_editor_absoluteX="313dp" />
 
     <EditText
@@ -66,7 +66,7 @@
         android:id="@+id/imageView8"
         android:layout_width="391dp"
         android:layout_height="259dp"
-        app:srcCompat="@drawable/nikeNFTShoes"
+        app:srcCompat="@drawable/nikenftshoes"
         tools:layout_editor_absoluteX="-7dp"
         tools:layout_editor_absoluteY="133dp" />
 
@@ -74,7 +74,7 @@
         android:id="@+id/imageView5"
         android:layout_width="299dp"
         android:layout_height="254dp"
-        app:srcCompat="@drawable/GTNFTPixo"
+        app:srcCompat="@drawable/gtnftpixo"
         tools:layout_editor_absoluteX="49dp"
         tools:layout_editor_absoluteY="398dp" />
 

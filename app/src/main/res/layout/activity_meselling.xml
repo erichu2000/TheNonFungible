@@ -58,10 +58,10 @@
         tools:layout_editor_absoluteY="678dp" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/mestopped"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:srcCompat="@drawable/meselling"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="327dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

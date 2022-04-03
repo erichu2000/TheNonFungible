@@ -5,65 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="2dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="652dp" />
-
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="60dp"
-        android:layout_height="52dp"
+        android:id="@+id/imageView7"
+        android:layout_width="64dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/categoryUnselected"
-        tools:layout_editor_absoluteX="123dp" />
+        app:srcCompat="@drawable/homeunselected"
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="71dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="10dp"
+        android:id="@+id/imageView9"
+        android:layout_width="83dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:srcCompat="@drawable/MessageUnselected" />
+        app:srcCompat="@drawable/categoryunselected"
+        tools:layout_editor_absoluteX="108dp" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="61dp"
-        android:layout_height="72dp"
-        app:srcCompat="@drawable/homeUnselected"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="659dp" />
+        android:layout_width="79dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/messageunselected"
+        tools:layout_editor_absoluteX="222dp" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/meSelected"
-        tools:layout_editor_absoluteX="321dp"
-        tools:layout_editor_absoluteY="659dp" />
+        android:layout_width="74dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/meselected"
+        tools:layout_editor_absoluteX="321dp" />
 
     <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="396dp"
-        android:layout_height="269dp"
-        app:srcCompat="@drawable/sampleProfile"
-        tools:layout_editor_absoluteX="5dp"
+        android:id="@+id/imageView12"
+        android:layout_width="346dp"
+        android:layout_height="367dp"
+        app:srcCompat="@drawable/profilesample"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="391dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="678dp" />
+
     <ImageView
-        android:id="@+id/imageView20"
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/meSoldOut"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="285dp" />
-
-
+        app:srcCompat="@drawable/mesoldout"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="325dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
