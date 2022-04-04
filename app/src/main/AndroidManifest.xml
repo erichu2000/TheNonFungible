@@ -35,6 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".View.SplashActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".View.MeShowme"
             android:exported="true">
 
         </activity>

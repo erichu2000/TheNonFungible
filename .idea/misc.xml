@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/drawable/ic_message.xml" value="0.123" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2815" />
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.123" />
-        <entry key="app/src/main/res/drawable/ic_radiant_gradient.xml" value="0.2815" />
+        <entry key="app/src/main/res/drawable/ic_radiant_gradient.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_slanted_gradient.xml" value="0.309" />
         <entry key="app/src/main/res/drawable/ic_store.xml" value="0.2815" />
         <entry key="app/src/main/res/layout/activity_bottom_navi.xml" value="0.16034985422740525" />
@@ -45,6 +45,7 @@
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.1828774062816616" />
+        <entry key="app/src/main/res/layout/fragment_showme.xml" value="0.10572916666666667" />
         <entry key="app/src/main/res/layout/inventory.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/inventory_recyclerview_item.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/layout/market.xml" value="0.1" />
