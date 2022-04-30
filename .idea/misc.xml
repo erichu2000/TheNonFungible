@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_bottom_navi.xml" value="0.16034985422740525" />
         <entry key="app/src/main/res/layout/activity_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_itemviewing.xml" value="0.24635416666666668" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_me.xml" value="0.14719202898550723" />
         <entry key="app/src/main/res/layout/activity_me_selling.xml" value="0.11875" />
@@ -40,6 +41,7 @@
         <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.3278985507246377" />
+        <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.15942028985507245" />
         <entry key="app/src/main/res/layout/fragment_market.xml" value="0.3278985507246377" />
         <entry key="app/src/main/res/layout/fragment_me.xml" value="0.20555877685546878" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.3278985507246377" />
