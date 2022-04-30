@@ -24,4 +24,32 @@ public class Good {
         this.isOnSale = isOnSale;
         this.ownerId = ownerId;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getItemImageID() {
+        return itemImageID;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getItemType() {
+        return itemType;
+    }
+
+    public boolean isOnSale() {
+        return isOnSale;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
 }
