@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/itemPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="50dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/itemViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="200dp"
+        android:text="itemName"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/descriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:text="Description"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/puchaseButton"
+        android:layout_width="165dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="550dp"
+        app:srcCompat="@drawable/purchasebutton" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:text="itemPrice"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/specificDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:text="specificDescription" />
+
+</RelativeLayout>

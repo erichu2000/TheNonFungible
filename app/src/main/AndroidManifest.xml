@@ -28,10 +28,17 @@
             android:name=".View.SplashActivity"
             android:exported="true"/>
         <activity
+            android:name=".View.ItemViewingActivity"
+            android:exported="true"/>
+        <activity
             android:name=".View.MeShowme"
             android:exported="true">
 
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
