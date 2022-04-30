@@ -51,6 +51,7 @@
         <entry key="app/src/main/res/layout/fragment_showme.xml" value="0.10572916666666667" />
         <entry key="app/src/main/res/layout/inventory.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/inventory_recyclerview_item.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/list_layout.xml" value="0.3444814046223959" />
         <entry key="app/src/main/res/layout/market.xml" value="0.1" />
         <entry key="app/src/main/res/layout/market_recyclerview_item.xml" value="0.15729483282674772" />
         <entry key="app/src/main/res/layout/user_profile.xml" value="0.3203342618384401" />

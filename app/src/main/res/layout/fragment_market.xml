@@ -14,7 +14,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Search Your NFT Item"
+        android:text="Search NFT Item"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -37,13 +37,18 @@
         android:minHeight="48dp"
         android:text="Enter item" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="528dp"
+        android:layout_below="@+id/search_field"
+        android:layout_marginTop="40dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/searchBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="250dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="63dp"
         app:srcCompat="@android:drawable/ic_menu_search" />
-
-
 </RelativeLayout>
