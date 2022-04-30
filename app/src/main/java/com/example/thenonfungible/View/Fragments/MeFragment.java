@@ -9,30 +9,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.thenonfungible.R;
 import com.example.thenonfungible.View.MeShowme;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MeFragment#newInstance} factory method to
- * create an instance of this fragment.
  */
 public class MeFragment extends Fragment {
+
+    private DatabaseReference database;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_me, container, false);
-        Button sendButton = (Button) view.findViewById(R.id.button_showme);
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MeShowme.class);
-                startActivity(intent);
-            }
-        });
+        // Grab database reference
+        database = FirebaseDatabase.getInstance().getReference();
+
+
+
+
+        // Reference for clothing, pants, and shoes image button
+        ImageButton clothing = (ImageButton) getView().findViewById(R.id.clothing);
+        ImageButton pants = (ImageButton) getView().findViewById(R.id.pants);
+        ImageButton shoes = (ImageButton) getView().findViewById(R.id.shoes);
+
+
+
+
+
         return view;
 
 

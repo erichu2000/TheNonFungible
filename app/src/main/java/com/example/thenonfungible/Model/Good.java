@@ -1,61 +1,29 @@
 package com.example.thenonfungible.Model;
 
+import android.media.Image;
+
 public class Good {
     private int id;
     private String name;
+    private String description;
+    private Image itemImage;
+    private int price;
+    private String itemType; // {clothing, pants, shoes}
+    private boolean isOnSale;
+    private int ownerId; // same as "userId" in User class
 
-    public Integer getImageResource() {
-        return imageResource;
+    public Good() {
+
     }
 
-    public void setImageResource(Integer imageResource) {
-        this.imageResource = imageResource;
-    }
-
-    private Integer imageResource;
-    private double currentPrice;
-    private double previousPrice;
-
-    public User getOwner() {
-        return owner;
-    }
-
-    public void setOwner(User owner) {
-        this.owner = owner;
-    }
-
-    private User owner;
-    //private image image;
-
-    public void setId(int id) {
+    public Good(int id, String name, String description, Image itemImage, int price, String itemType, boolean isOnSale, int ownerId) {
         this.id = id;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public void setCurrentPrice(double currentPrice) {
-        this.currentPrice = currentPrice;
-    }
-
-    public void setPreviousPrice(double previousPrice) {
-        this.previousPrice = previousPrice;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getCurrentPrice() {
-        return currentPrice;
-    }
-
-    public double getPreviousPrice() {
-        return previousPrice;
+        this.description = description;
+        this.itemImage = itemImage;
+        this.price = price;
+        this.itemType = itemType;
+        this.isOnSale = isOnSale;
+        this.ownerId = ownerId;
     }
 }
