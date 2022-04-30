@@ -46,9 +46,9 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
 
         mResultList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mGoodDatabase = FirebaseDatabase.getInstance().getReference().child("goods");
+        mGoodDatabase = FirebaseDatabase.getInstance().getReference("goods");
 
-        fireBaseSearch();
+        fireBaseSearch("");
 
         mSearchBtn.setOnClickListener(this);
 
@@ -59,13 +59,14 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.searchBtn:
-                fireBaseSearch();
+                String searchName = mSearchField.getText().toString();
+                fireBaseSearch(searchName);
                 break;
         }
     }
 
-    private void fireBaseSearch() {
-        FirebaseRecyclerOptions<Good> options = new FirebaseRecyclerOptions.Builder<Good>().setQuery(mGoodDatabase, Good.class).build();
+    private void fireBaseSearch(String searchName) {
+        FirebaseRecyclerOptions<Good> options = new FirebaseRecyclerOptions.Builder<Good>().setQuery(mGoodDatabase.orderByChild("name").startAt(searchName), Good.class).build();
 
         FirebaseRecyclerAdapter firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
             @Override
@@ -94,7 +95,7 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
         public void setDetails(FragmentActivity activity, String item_name, String item_price, String item_image) {
             TextView itemName = (TextView) mView.findViewById(R.id.itemDisplayName);
             TextView itemPrice = (TextView) mView.findViewById(R.id.itemDisplayPrice);
-            ImageView itemImage = (ImageView) mView.findViewById(R.id.itemDisplayImage);
+            ImageButton itemImage = (ImageButton) mView.findViewById(R.id.itemDisplayButton);
             itemName.setText(item_name);
             itemPrice.setText(item_price);
             Glide.with(activity).load(item_image).into(itemImage);
