@@ -3,6 +3,7 @@ package com.example.thenonfungible.Model;
 import android.media.Image;
 
 public class Good {
+    public String goodId;
     public String name;
     public String description;
     public String itemImageID;
@@ -15,7 +16,8 @@ public class Good {
 
     }
 
-    public Good(String name, String description, String itemImageID, double price, String itemType, boolean isOnSale, String ownerId) {
+    public Good(String goodId, String name, String description, String itemImageID, double price, String itemType, boolean isOnSale, String ownerId) {
+        this.goodId = goodId;
         this.name = name;
         this.description = description;
         this.itemImageID = itemImageID;
