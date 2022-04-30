@@ -2,23 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home2"
-        android:icon="@drawable/ic_home"
-        android:title="Home" />
-
-    <item
-        android:id="@+id/category"
-        android:icon="@drawable/ic_category"
-        android:title="Category" />
-
-    <item
-        android:id="@+id/message2"
-        android:icon="@drawable/ic_message"
-        android:title="Message" />
-
-    <item
         android:id="@+id/me"
         android:icon="@drawable/ic_person"
         android:title="Me" />
+
+    <item
+        android:id="@+id/inventory"
+        android:icon="@drawable/ic_inventory"
+        android:title="Inventory" />
+
+    <item
+        android:id="@+id/market"
+        android:icon="@drawable/ic_market"
+        android:title="Market" />
 
 </menu>

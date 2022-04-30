@@ -32,12 +32,10 @@ public class MeFragment extends Fragment {
         database = FirebaseDatabase.getInstance().getReference();
 
 
-
-
         // Reference for clothing, pants, and shoes image button
-        ImageButton clothing = (ImageButton) getView().findViewById(R.id.clothing);
-        ImageButton pants = (ImageButton) getView().findViewById(R.id.pants);
-        ImageButton shoes = (ImageButton) getView().findViewById(R.id.shoes);
+        ImageButton clothing = (ImageButton) view.findViewById(R.id.clothing);
+        ImageButton pants = (ImageButton) view.findViewById(R.id.pants);
+        ImageButton shoes = (ImageButton) view.findViewById(R.id.shoes);
 
 
 

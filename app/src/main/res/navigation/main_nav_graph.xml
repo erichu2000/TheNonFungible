@@ -3,26 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/home2">
+    app:startDestination="@id/market">
 
     <fragment
-        android:id="@+id/home2"
-        android:name="com.example.thenonfungible.View.Fragments.HomeFragment"
+        android:id="@+id/market"
+        android:name="com.example.thenonfungible.View.Fragments.MarketFragment"
         android:label="fragment_home2"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_market" />
     <fragment
         android:id="@+id/me"
         android:name="com.example.thenonfungible.View.Fragments.MeFragment"
         android:label="fragment_me"
         tools:layout="@layout/fragment_me" />
     <fragment
-        android:id="@+id/message2"
-        android:name="com.example.thenonfungible.View.Fragments.MessageFragment"
-        android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
-    <fragment
-        android:id="@+id/category"
-        android:name="com.example.thenonfungible.View.Fragments.CategoryFragment"
+        android:id="@+id/inventory"
+        android:name="com.example.thenonfungible.View.Fragments.InventoryFragment"
         android:label="fragment_market"
-        tools:layout="@layout/fragment_category" />
+        tools:layout="@layout/fragment_inventory" />
 </navigation>

@@ -2,10 +2,9 @@ package com.example.thenonfungible.View;
 
 import android.os.Bundle;
 
-import com.example.thenonfungible.View.Fragments.CategoryFragment;
-import com.example.thenonfungible.View.Fragments.HomeFragment;
+import com.example.thenonfungible.View.Fragments.InventoryFragment;
+import com.example.thenonfungible.View.Fragments.MarketFragment;
 import com.example.thenonfungible.View.Fragments.MeFragment;
-import com.example.thenonfungible.View.Fragments.MessageFragment;
 import com.example.thenonfungible.R;
 import com.example.thenonfungible.databinding.ActivityBottomNaviBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -27,23 +26,20 @@ public class BottomNaviActivity extends AppCompatActivity {
         binding = ActivityBottomNaviBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new HomeFragment());
+        replaceFragment(new MeFragment());
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
-                case R.id.home2:
-                    replaceFragment(new HomeFragment());
-                    break;
-                case R.id.category:
-                    replaceFragment(new CategoryFragment());
-                    break;
-                case R.id.message2:
-                    replaceFragment(new MessageFragment());
-                    break;
                 case R.id.me:
                     replaceFragment(new MeFragment());
+                    break;
+                case R.id.inventory:
+                    replaceFragment(new InventoryFragment());
+                    break;
+                case R.id.market:
+                    replaceFragment(new MarketFragment());
                     break;
             }
             return true;

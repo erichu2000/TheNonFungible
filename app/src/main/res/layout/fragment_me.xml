@@ -14,9 +14,9 @@
         android:id="@+id/clothing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:src="@tools:sample/avatars"
         android:layout_above="@+id/pants"
-        android:layout_alignStart="@+id/pants" />
+        android:layout_alignStart="@+id/pants"
+        tools:src="@tools:sample/avatars" />
     <ImageButton
         android:id="@+id/pants"
         android:layout_width="wrap_content"
