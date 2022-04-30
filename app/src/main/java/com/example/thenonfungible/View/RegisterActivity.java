@@ -16,13 +16,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-
+    TextInputEditText etRegUserName;
     TextInputEditText etRegEmail;
     TextInputEditText etRegPassword;
     TextView tvLoginHere;
     Button btnRegister;
+    FirebaseDatabase fstore;
 
     FirebaseAuth mAuth;
 
@@ -30,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        etRegUserName = findViewById(R.id.etRegUserName);
         etRegEmail = findViewById(R.id.etRegEmail);
         etRegPassword = findViewById(R.id.etRegPass);
         tvLoginHere = findViewById(R.id.tvLoginHere);
@@ -50,8 +52,11 @@ public class RegisterActivity extends AppCompatActivity {
     private void createUser(){
         String email = etRegEmail.getText().toString();
         String password = etRegPassword.getText().toString();
-
-        if (TextUtils.isEmpty(email)){
+        String userName = etRegUserName.getText().toString();
+        if (TextUtils.isEmpty(userName)){
+            etRegUserName.setError("UserName cannot be empty");
+            etRegUserName.requestFocus();
+        }else if (TextUtils.isEmpty(email)){
             etRegEmail.setError("Email cannot be empty");
             etRegEmail.requestFocus();
         }else if (TextUtils.isEmpty(password)){
