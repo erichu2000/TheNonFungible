@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.example.thenonfungible.Model.User;
 import com.example.thenonfungible.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,6 +18,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.DatabaseReference;
 
 public class RegisterActivity extends AppCompatActivity {
     TextInputEditText etRegUserName;
@@ -24,8 +26,8 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText etRegPassword;
     TextView tvLoginHere;
     Button btnRegister;
-    FirebaseDatabase fstore;
 
+    DatabaseReference database;
     FirebaseAuth mAuth;
 
     @Override
@@ -39,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
 
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance().getReference();
 
         btnRegister.setOnClickListener(view ->{
             createUser();
@@ -68,6 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "User registered successfully", Toast.LENGTH_SHORT).show();
+                        String userId = mAuth.getCurrentUser().getUid();
+                        User newUser = new User(userId, etRegUserName.getText().toString(), etRegPassword.getText().toString(), etRegEmail.getText().toString());
+                        database.child("user").child(userId).setValue(newUser);
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                     }else{
                         Toast.makeText(RegisterActivity.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
