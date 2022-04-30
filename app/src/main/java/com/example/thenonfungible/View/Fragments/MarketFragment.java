@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-public class MarketFragment extends Fragment {
+public class MarketFragment extends Fragment implements View.OnClickListener {
 
     private EditText mSearchField;
     private ImageButton mSearchBtn;
@@ -40,27 +40,34 @@ public class MarketFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_market, container, false);
 
-
         mSearchField = (EditText) view.findViewById(R.id.search_field);
         mSearchBtn = (ImageButton) view.findViewById(R.id.searchBtn);
         mResultList = (RecyclerView) view.findViewById(R.id.result_list);
 
         mResultList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mGoodDatabase = FirebaseDatabase.getInstance().getReference("goods");
-        mSearchBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fireBaseSearch();
-            }
-        });
+        mGoodDatabase = FirebaseDatabase.getInstance().getReference().child("goods");
+
+        fireBaseSearch();
+
+        mSearchBtn.setOnClickListener(this);
+
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.searchBtn:
+                fireBaseSearch();
+                break;
+        }
     }
 
     private void fireBaseSearch() {
         FirebaseRecyclerOptions<Good> options = new FirebaseRecyclerOptions.Builder<Good>().setQuery(mGoodDatabase, Good.class).build();
 
-        FirebaseRecyclerAdapter<Good,GoodsViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
+        FirebaseRecyclerAdapter firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull GoodsViewHolder holder, int position, @NonNull Good model) {
                holder.setDetails(getActivity(), model.getName(),model.getPrice(),model.getItemImageID());
@@ -73,9 +80,8 @@ public class MarketFragment extends Fragment {
                 return new GoodsViewHolder(view);
             }
         };
-
+        firebaseRecyclerAdapter.startListening();
         mResultList.setAdapter(firebaseRecyclerAdapter);
-
     }
 
     public static class GoodsViewHolder extends RecyclerView.ViewHolder {
