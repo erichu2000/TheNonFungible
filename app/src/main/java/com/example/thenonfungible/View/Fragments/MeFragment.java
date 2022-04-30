@@ -22,14 +22,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MeFragment extends Fragment {
+public class MeFragment extends Fragment implements View.OnClickListener {
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
@@ -75,14 +74,23 @@ public class MeFragment extends Fragment {
         };
         avatarReference.addListenerForSingleValueEvent(avatarsDataListener);
 
-//        clothing.setOnClickListener();
-//        pants.setOnClickListener();
-//        shoes.setOnClickListener();
-
-
+        clothing.setOnClickListener(this);
+        pants.setOnClickListener(this);
+        shoes.setOnClickListener(this);
 
         return view;
+    }
 
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.clothing:
 
+                break;
+            case R.id.pants:
+                break;
+            case R.id.shoes:
+                break;
+        }
     }
 }
