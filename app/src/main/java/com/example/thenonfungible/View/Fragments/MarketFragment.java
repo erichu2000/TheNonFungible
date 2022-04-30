@@ -1,5 +1,6 @@
 package com.example.thenonfungible.View.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import com.bumptech.glide.Glide;
 import com.example.thenonfungible.Model.Good;
 import com.example.thenonfungible.R;
 
+import com.example.thenonfungible.View.ItemViewingActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -71,7 +73,7 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
         FirebaseRecyclerAdapter firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull GoodsViewHolder holder, int position, @NonNull Good model) {
-               holder.setDetails(getActivity(), model.getName(),model.getPrice(),model.getItemImageID());
+               holder.setDetails(getActivity(), model.getName(),model.getPrice(),model.getItemImageID(), model.getDescription());
             }
 
             @NonNull
@@ -85,21 +87,28 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
         mResultList.setAdapter(firebaseRecyclerAdapter);
     }
 
-    public static class GoodsViewHolder extends RecyclerView.ViewHolder {
+    public class GoodsViewHolder extends RecyclerView.ViewHolder {
         View mView;
 
         public GoodsViewHolder(View itemView) {
             super(itemView);
             mView = itemView;
         }
-        public void setDetails(FragmentActivity activity, String item_name, String item_price, String item_image) {
+        public void setDetails(FragmentActivity activity, String item_name, String item_price, String item_image, String item_description) {
             TextView itemName = (TextView) mView.findViewById(R.id.itemDisplayName);
             TextView itemPrice = (TextView) mView.findViewById(R.id.itemDisplayPrice);
             ImageButton itemImage = (ImageButton) mView.findViewById(R.id.itemDisplayButton);
+            itemImage.setOnClickListener(view -> {
+                Intent i = new Intent(getActivity(),ItemViewingActivity.class);
+                i.putExtra("itemName",item_name);
+                i.putExtra("itemPrice",item_price);
+                i.putExtra("itemImage",item_image);
+                i.putExtra("itemDescription", item_description);
+                startActivity(i);
+            });
             itemName.setText(item_name);
             itemPrice.setText(item_price);
             Glide.with(activity).load(item_image).into(itemImage);
         }
-
     }
 }

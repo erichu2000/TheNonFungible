@@ -21,19 +21,22 @@ public class ItemViewingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itemviewing);
 
-        String receivedItemName;
+        Bundle extras = getIntent().getExtras();
 
         ImageView itemPhoto = (ImageView) findViewById(R.id.itemPhoto);
         TextView itemName = (TextView) findViewById(R.id.itemViewName);
-        TextView description = (TextView) findViewById(R.id.descriptionTitle);
         TextView itemPrice = (TextView) findViewById(R.id.itemPrice);
         TextView specificDescription = (TextView) findViewById(R.id.specificDescription);
         ImageButton purchaseBtn = (ImageButton) findViewById(R.id.puchaseButton);
 
-        //Glide.with(this).load(Image_URL).into(itemPhoto);
+        itemName.setText(extras.getString("itemName"));
+        itemPrice.setText(extras.getString("itemPrice"));
+        specificDescription.setText(extras.getString("itemDescription"));
+        Glide.with(this).load(extras.getString("itemImage")).into(itemPhoto);
 
         purchaseBtn.setOnClickListener(view -> {
-            startActivity(new Intent(ItemViewingActivity.this, MarketFragment.class));
+
+            startActivity(new Intent(ItemViewingActivity.this, BottomNaviActivity.class));
         });
 
 
