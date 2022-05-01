@@ -40,7 +40,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/result_list"
         android:layout_width="match_parent"
-        android:layout_height="528dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/search_field"
         android:layout_marginTop="40dp"></androidx.recyclerview.widget.RecyclerView>
 
