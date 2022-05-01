@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.GetMineActivity">
 
-    <!--ListView for displaying
-        our list of courses-->
-<!--    <ListView-->
-<!--        android:id="@+id/goodnames"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
-<!--    -->
-<!--    -->
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="111dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/homelander"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="259dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/goodsrecycle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="160dp" />
+
+    <TextView
+        android:id="@+id/invLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="120dp"
+        android:text="My NFT" />
+
+
 </RelativeLayout>

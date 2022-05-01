@@ -7,8 +7,8 @@
 
     <ImageButton
         android:id="@+id/selling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="78dp"
+        android:layout_height="75dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/ic_baseline_shopping_cart_24"
@@ -18,24 +18,25 @@
 
     <ImageButton
         android:id="@+id/owned"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
+        android:layout_width="71dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/ic_inventory"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="58dp"
         tools:layout_editor_absoluteY="178dp" />
 
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="124dp"
+        android:id="@+id/imageView20"
+        android:layout_width="111dp"
         android:layout_height="117dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="22dp"
-        tools:src="@tools:sample/avatars" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/homelander"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="259dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -43,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="120dp"
-        android:text="UserName"
+        android:text="Jerry"
         tools:layout_editor_absoluteX="182dp"
         tools:layout_editor_absoluteY="106dp" />
 
@@ -52,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="300dp"
         android:text="Selling"
         tools:layout_editor_absoluteX="58dp"
         tools:layout_editor_absoluteY="237dp" />
@@ -61,10 +62,16 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="300dp"
         android:text="MyNFT"
         tools:layout_editor_absoluteX="181dp"
         tools:layout_editor_absoluteY="237dp" />
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycleInInv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--     />-->
 
 </RelativeLayout>

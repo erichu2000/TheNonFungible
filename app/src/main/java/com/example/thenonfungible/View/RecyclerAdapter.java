@@ -35,7 +35,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.textView.setText(goodList.get(position).getName());
+        holder.textNameView.setText(goodList.get(position).getName());
+        holder.textPriceView.setText(goodList.get(position).getPrice());
         Glide.with(mContext).load(goodList.get(position).getItemImageID()).into(holder.imageView);
     }
 
@@ -46,12 +47,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public  class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
-        TextView textView;
+        TextView textNameView;
+        TextView textPriceView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.item_image);
-            textView = itemView.findViewById(R.id.item_text);
+            textNameView = itemView.findViewById(R.id.itemName);
+            textPriceView = itemView.findViewById(R.id.itemPrice);
         }
     }
 }
