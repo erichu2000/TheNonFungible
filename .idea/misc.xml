@@ -22,11 +22,8 @@
         <entry key="app/src/main/res/layout/activity_bottom_navi.xml" value="0.16034985422740525" />
         <entry key="app/src/main/res/layout/activity_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
-<<<<<<< HEAD
-=======
-        <entry key="app/src/main/res/layout/activity_inventory.xml" value="0.7222579956054688" />
+        <entry key="app/src/main/res/layout/activity_inventory.xml" value="0.16596374511718748" />
         <entry key="app/src/main/res/layout/activity_itemviewing.xml" value="0.29119415283203126" />
->>>>>>> jingjing
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_me.xml" value="0.14719202898550723" />
         <entry key="app/src/main/res/layout/activity_me_selling.xml" value="0.11875" />
@@ -44,13 +41,9 @@
         <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.3278985507246377" />
-<<<<<<< HEAD
-        <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.13768115942028986" />
-=======
         <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.20552520751953127" />
->>>>>>> jingjing
         <entry key="app/src/main/res/layout/fragment_market.xml" value="0.3278985507246377" />
-        <entry key="app/src/main/res/layout/fragment_me.xml" value="0.116751269035533" />
+        <entry key="app/src/main/res/layout/fragment_me.xml" value="0.20555877685546878" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.3278985507246377" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3098958333333333" />
@@ -64,6 +57,7 @@
         <entry key="app/src/main/res/layout/market_recyclerview_item.xml" value="0.15729483282674772" />
         <entry key="app/src/main/res/layout/user_profile.xml" value="0.3203342618384401" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.12698412698412698" />
+        <entry key="app/src/main/res/menu/option_menu.xml" value="0.4823211669921875" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.123" />
       </map>
     </option>

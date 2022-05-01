@@ -43,6 +43,22 @@
         android:text="Price"
         android:textSize="12sp" />
 
+    <Button
+        android:id="@+id/sellButton"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="90dp"
+        android:text="Sell it"></Button>
+
+    <Button
+        android:id="@+id/stopSellButton"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="90dp"
+        android:text="Stop sell it"></Button>
+
 </RelativeLayout>
 
 

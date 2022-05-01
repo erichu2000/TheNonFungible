@@ -29,13 +29,13 @@ public class GetMineActivity extends AppCompatActivity {
     private  ArrayList<Good> goodsList;
     private RecyclerAdapter recyclerAdapter;
     String Uid;
-    String onselling;
+    String onSelling;
     TextView lable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Bundle extras = getIntent().getExtras();
-         onselling = extras.getString("onSelling");
+         onSelling = extras.getString("onSelling");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory);
         recyclerView = findViewById(R.id.goodsrecycle);
@@ -64,7 +64,7 @@ public class GetMineActivity extends AppCompatActivity {
                 for (DataSnapshot  snapshot : dataSnapshot.getChildren()) {
                     Good good = snapshot.getValue(Good.class);
                     if (good.ownerId.equals(Uid)){
-                        if (onselling.equals("1")){
+                        if (onSelling.equals("1")){
                             lable.setText("My Selling");
                             if (good.isOnSale){
                                 goodsList.add(good);}
