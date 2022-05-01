@@ -6,7 +6,6 @@
         <entry key="../../../../../../layout/custom_preview.xml" value="0.4102701822916668" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2815" />
         <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1295" />
-        <entry key="app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.1595" />
         <entry key="app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2815" />
         <entry key="app/src/main/res/drawable/ic_category.xml" value="0.2815" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2815" />
@@ -23,7 +22,8 @@
         <entry key="app/src/main/res/layout/activity_bottom_navi.xml" value="0.16034985422740525" />
         <entry key="app/src/main/res/layout/activity_category.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_itemviewing.xml" value="0.24635416666666668" />
+        <entry key="app/src/main/res/layout/activity_inventory.xml" value="0.5308456420898438" />
+        <entry key="app/src/main/res/layout/activity_itemviewing.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_me.xml" value="0.14719202898550723" />
         <entry key="app/src/main/res/layout/activity_me_selling.xml" value="0.11875" />
@@ -41,7 +41,7 @@
         <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/fragment_home2.xml" value="0.3278985507246377" />
-        <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/fragment_inventory.xml" value="0.23603973388671873" />
         <entry key="app/src/main/res/layout/fragment_market.xml" value="0.3278985507246377" />
         <entry key="app/src/main/res/layout/fragment_me.xml" value="0.20555877685546878" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.3278985507246377" />
@@ -51,6 +51,7 @@
         <entry key="app/src/main/res/layout/fragment_showme.xml" value="0.10572916666666667" />
         <entry key="app/src/main/res/layout/inventory.xml" value="0.33541666666666664" />
         <entry key="app/src/main/res/layout/inventory_recyclerview_item.xml" value="0.17447916666666666" />
+        <entry key="app/src/main/res/layout/item.xml" value="0.10833333333333334" />
         <entry key="app/src/main/res/layout/market.xml" value="0.1" />
         <entry key="app/src/main/res/layout/market_recyclerview_item.xml" value="0.15729483282674772" />
         <entry key="app/src/main/res/layout/user_profile.xml" value="0.3203342618384401" />
@@ -59,7 +60,6 @@
       </map>
     </option>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
