@@ -7,7 +7,7 @@ public class Good {
     public String name;
     public String description;
     public String itemImageID;
-    public double price;
+    public String price;
     public String itemType; // {clothing, pants, shoes}
     public boolean isOnSale;
     public String ownerId; // same as "userId" in User class
@@ -16,7 +16,7 @@ public class Good {
 
     }
 
-    public Good(String goodId, String name, String description, String itemImageID, double price, String itemType, boolean isOnSale, String ownerId) {
+    public Good(String goodId, String name, String description, String itemImageID, String price, String itemType, boolean isOnSale, String ownerId) {
         this.goodId = goodId;
         this.name = name;
         this.description = description;
@@ -39,7 +39,7 @@ public class Good {
         return itemImageID;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 

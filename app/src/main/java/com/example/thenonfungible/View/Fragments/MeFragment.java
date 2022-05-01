@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.example.thenonfungible.Model.Avatar;
 import com.example.thenonfungible.Model.Good;
 import com.example.thenonfungible.R;
+import com.example.thenonfungible.View.ClothingActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -85,11 +86,13 @@ public class MeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.clothing:
-
+                startActivity(new Intent(getActivity(), ClothingActivity.class));
                 break;
             case R.id.pants:
+
                 break;
             case R.id.shoes:
+
                 break;
         }
     }
