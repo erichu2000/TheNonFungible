@@ -10,10 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
+import com.example.thenonfungible.Model.Good;
+import com.example.thenonfungible.Model.User;
 import com.example.thenonfungible.R;
 import com.example.thenonfungible.View.GetMineActivity;
 import com.example.thenonfungible.View.GetMineActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 public class InventoryFragment extends Fragment {
 

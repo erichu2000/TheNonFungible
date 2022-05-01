@@ -2,6 +2,7 @@ package com.example.thenonfungible.View;
 
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.example.thenonfungible.Model.Good;
 import com.example.thenonfungible.R;
@@ -29,16 +30,17 @@ public class GetMineActivity extends AppCompatActivity {
     private RecyclerAdapter recyclerAdapter;
     String Uid;
     String onselling;
+    TextView lable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Bundle extras = getIntent().getExtras();
          onselling = extras.getString("onSelling");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory);
         recyclerView = findViewById(R.id.goodsrecycle);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        lable = (TextView) findViewById(R.id.invLabel);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -46,11 +48,10 @@ public class GetMineActivity extends AppCompatActivity {
         myRef = FirebaseDatabase.getInstance().getReference();
         goodsList = new ArrayList<>();
 
-
         // clear first
         ClearAll();
 
-        // get data fucntion
+        // get data function
         GetDataFromFireBase();
     }
 
@@ -64,10 +65,12 @@ public class GetMineActivity extends AppCompatActivity {
                     Good good = snapshot.getValue(Good.class);
                     if (good.ownerId.equals(Uid)){
                         if (onselling.equals("1")){
+                            lable.setText("My Selling");
                             if (good.isOnSale){
                                 goodsList.add(good);}
                         }
                         else{
+                            lable.setText("My NFT");
                             goodsList.add(good);
                         }
                     }
