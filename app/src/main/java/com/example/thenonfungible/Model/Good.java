@@ -30,6 +30,7 @@ public class Good {
         return itemType;
     }
 
+
     public boolean isOnSale() {
         return isOnSale;
     }

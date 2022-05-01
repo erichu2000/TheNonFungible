@@ -26,7 +26,6 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText etRegPassword;
     TextView tvLoginHere;
     Button btnRegister;
-
     DatabaseReference database;
     FirebaseAuth mAuth;
 

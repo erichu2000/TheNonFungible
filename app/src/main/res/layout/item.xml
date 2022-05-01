@@ -45,19 +45,23 @@
 
     <Button
         android:id="@+id/sellButton"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="350dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="320dp"
         android:layout_marginTop="90dp"
-        android:text="Sell it"></Button>
+        android:state_enabled="false"
+        android:text="Sell it"
+        android:textSize="8sp"></Button>
 
     <Button
         android:id="@+id/stopSellButton"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="310dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="90dp"
-        android:text="Stop sell it"></Button>
+        android:state_enabled="false"
+        android:text="Stop sell it"
+        android:textSize="8sp"></Button>
 
 </RelativeLayout>
 
