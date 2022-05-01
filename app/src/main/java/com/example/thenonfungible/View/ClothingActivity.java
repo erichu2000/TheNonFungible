@@ -1,6 +1,9 @@
 package com.example.thenonfungible.View;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
@@ -23,16 +26,28 @@ public class ClothingActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
     List<Good> clothing = new ArrayList<>();
-    private ClothingAdapter clothingAdapter = new ClothingAdapter(this, clothing);
+    private final ClothingAdapter clothingAdapter = new ClothingAdapter(this, clothing);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clothing);
 
-        GridView gridView = (GridView) findViewById(R.id.clothingGrid);
         database = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
+
+        GridView gridView = (GridView) findViewById(R.id.clothingGrid);
+        gridView.setAdapter(clothingAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Save changes in database
+                DatabaseReference userAvatarReference = database.getReference("avatars").child(mAuth.getCurrentUser().getUid());
+                userAvatarReference.child("clothing").setValue(clothing.get(i));
+                // Page transition
+                startActivity(new Intent(ClothingActivity.this, BottomNaviActivity.class));
+            }
+        });
 
         // Get goods reference
         DatabaseReference goodsReference = database.getReference().child("goods");
@@ -58,6 +73,5 @@ public class ClothingActivity extends AppCompatActivity {
             }
         };
         goodsReference.addListenerForSingleValueEvent(goodsDataListener);
-        gridView.setAdapter(clothingAdapter);
     }
 }

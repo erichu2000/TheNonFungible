@@ -6,31 +6,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
 import com.example.thenonfungible.Model.Good;
 import com.example.thenonfungible.R;
 
-
 import java.util.List;
 
-public class ClothingAdapter extends BaseAdapter {
+public class ShoesAdapter extends BaseAdapter {
     private Context context;
-    List<Good> clothing;
+    List<Good> shoes;
 
     // Constructor
-    public ClothingAdapter(Context c, List<Good> clothing) {
+    public ShoesAdapter(Context c, List<Good> shoes) {
         context = c;
         // Set up database instance
-        this.clothing = clothing;
+        this.shoes = shoes;
     }
 
     @Override
     public int getCount() {
-        return clothing.size();
+        return shoes.size();
     }
 
     @Override
@@ -51,10 +47,11 @@ public class ClothingAdapter extends BaseAdapter {
 
         ImageView imageView = view.findViewById(R.id.icon);
 
-        Good currentClothing = clothing.get(i);
+        Good currentShoes = shoes.get(i);
 
-        Glide.with(context).load(currentClothing.getItemImageID()).into(imageView);
+        Glide.with(context).load(currentShoes.getItemImageID()).into(imageView);
 
         return view;
     }
+
 }

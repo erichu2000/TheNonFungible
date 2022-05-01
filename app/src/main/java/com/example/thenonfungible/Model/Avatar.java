@@ -7,6 +7,12 @@ public class Avatar {
 
     public Avatar() {}
 
+    public Avatar(Good clothing, Good pants, Good shoes) {
+        this.clothing = clothing;
+        this.pants = pants;
+        this.shoes = shoes;
+    }
+
     public Good getClothing() {
         return clothing;
     }

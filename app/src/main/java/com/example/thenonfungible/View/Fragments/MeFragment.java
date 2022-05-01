@@ -17,6 +17,8 @@ import com.example.thenonfungible.Model.Avatar;
 import com.example.thenonfungible.Model.Good;
 import com.example.thenonfungible.R;
 import com.example.thenonfungible.View.ClothingActivity;
+import com.example.thenonfungible.View.PantsActivity;
+import com.example.thenonfungible.View.ShoesActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,10 +56,12 @@ public class MeFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Iterable<DataSnapshot> avatarsChildren = snapshot.getChildren();
+                boolean avatarExist = false;
 
                 for (DataSnapshot avatar : avatarsChildren) {
                     String userId = avatar.getKey();
                     if (userId.equals(mAuth.getCurrentUser().getUid())) {
+                        avatarExist = true;
                         Avatar a = avatar.getValue(Avatar.class);
                         String clothingImageId = a.getClothing().getItemImageID();
                         String pantsImageId = a.getPants().getItemImageID();
@@ -66,6 +70,10 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                         Glide.with(getActivity()).load(pantsImageId).into(pants);
                         Glide.with(getActivity()).load(shoesImageId).into(shoes);
                     }
+                }
+                if (!avatarExist) {
+                    Avatar a = new Avatar(new Good(), new Good(), new Good());
+                    avatarReference.child(mAuth.getCurrentUser().getUid()).setValue(a);
                 }
             }
             @Override
@@ -89,10 +97,10 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), ClothingActivity.class));
                 break;
             case R.id.pants:
-
+                startActivity(new Intent(getActivity(), PantsActivity.class));
                 break;
             case R.id.shoes:
-
+                startActivity(new Intent(getActivity(), ShoesActivity.class));
                 break;
         }
     }
