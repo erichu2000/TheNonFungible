@@ -73,7 +73,7 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
         FirebaseRecyclerAdapter firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull GoodsViewHolder holder, int position, @NonNull Good model) {
-               holder.setDetails(getActivity(), model.getName(),model.getPrice(),model.getItemImageID(), model.getDescription());
+               holder.setDetails(getActivity(), model.getName(),model.getPrice(),model.getItemImageID(), model.getDescription(), model.getGoodId());
             }
 
             @NonNull
@@ -94,7 +94,7 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
             super(itemView);
             mView = itemView;
         }
-        public void setDetails(FragmentActivity activity, String item_name, String item_price, String item_image, String item_description) {
+        public void setDetails(FragmentActivity activity, String item_name, String item_price, String item_image, String item_description, String item_id) {
             TextView itemName = (TextView) mView.findViewById(R.id.itemDisplayName);
             TextView itemPrice = (TextView) mView.findViewById(R.id.itemDisplayPrice);
             ImageButton itemImage = (ImageButton) mView.findViewById(R.id.itemDisplayButton);
@@ -104,6 +104,7 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
                 i.putExtra("itemPrice",item_price);
                 i.putExtra("itemImage",item_image);
                 i.putExtra("itemDescription", item_description);
+                i.putExtra("itemID", item_id);
                 startActivity(i);
             });
             itemName.setText(item_name);
