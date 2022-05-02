@@ -1,7 +1,5 @@
 package com.example.thenonfungible.Model;
 
-import android.media.Image;
-
 public class Good {
     public String goodId;
     public String name;
@@ -27,6 +25,10 @@ public class Good {
         this.ownerId = ownerId;
     }
 
+    public String getGoodId() {
+        return goodId;
+    }
+
     public String getName() {
         return name;
     }
@@ -46,6 +48,7 @@ public class Good {
     public String getItemType() {
         return itemType;
     }
+
 
     public boolean isOnSale() {
         return isOnSale;
