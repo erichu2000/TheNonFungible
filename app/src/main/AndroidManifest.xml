@@ -36,6 +36,12 @@
             android:name=".View.ClothingActivity"
             android:exported="true"/>
         <activity
+            android:name=".View.PantsActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".View.ShoesActivity"
+            android:exported="true"/>
+        <activity
             android:name=".View.MeShowme"
             android:exported="true">
         </activity>
