@@ -1,6 +1,7 @@
 package com.example.thenonfungible.Model;
 
 public class Good {
+
     public String goodId;
     public String name;
     public String description;
@@ -25,36 +26,5 @@ public class Good {
         this.ownerId = ownerId;
     }
 
-    public String getGoodId() {
-        return goodId;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getItemImageID() {
-        return itemImageID;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public String getItemType() {
-        return itemType;
-    }
-
-
-    public boolean isOnSale() {
-        return isOnSale;
-    }
-
-    public String getOwnerId() {
-        return ownerId;
-    }
 }
