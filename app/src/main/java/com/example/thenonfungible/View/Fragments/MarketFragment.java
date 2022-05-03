@@ -77,7 +77,6 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
             @Override
             protected void onBindViewHolder(@NonNull GoodsViewHolder holder, int position, @NonNull Good model) {
                 holder.setDetails(getActivity(), model.getName(), model.getPrice(), model.getItemImageID(), model.getDescription(), model.getGoodId());
-                holder.setDetails(getActivity(), model.getName(), model.getPrice(), model.getItemImageID(), model.getDescription(), model.getGoodId());
             }
 
             @NonNull
