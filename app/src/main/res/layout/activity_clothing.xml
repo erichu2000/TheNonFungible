@@ -2,20 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:fontFamily="@font/nunito_bold">
 
 
     <TextView
         android:id="@+id/clothing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clothing"
-        android:gravity="center"/>
+        android:text="My Clothing"
+        android:gravity="center"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <GridView
         android:id="@+id/clothingGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="3" />
+        android:numColumns="3"
+        android:layout_weight="1">
+
+    </GridView>
+
+    <Button
+        android:id="@+id/clothingBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Avatar"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/teal_700"/>
+
 
 </LinearLayout>

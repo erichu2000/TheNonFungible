@@ -26,11 +26,8 @@ public class BottomNaviActivity extends AppCompatActivity {
         binding = ActivityBottomNaviBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        replaceFragment(new MeFragment());
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(item -> {
-
             switch (item.getItemId()) {
                 case R.id.me:
                     replaceFragment(new MeFragment());
@@ -44,6 +41,16 @@ public class BottomNaviActivity extends AppCompatActivity {
             }
             return true;
         });
+
+        String data = getIntent().getStringExtra("fromItemViewing");
+        if (data != null && data.contentEquals("2")) {
+            bottomNavigationView.setSelectedItemId(R.id.market);
+            replaceFragment(new MarketFragment());
+        } else {
+            replaceFragment(new MeFragment());
+        }
+
+
     }
 
     private void replaceFragment(Fragment fragment) {

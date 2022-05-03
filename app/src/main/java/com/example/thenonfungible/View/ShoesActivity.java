@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoesActivity extends AppCompatActivity {
+public class ShoesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
@@ -44,7 +45,7 @@ public class ShoesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 // Save changes in database
                 DatabaseReference userAvatarReference = database.getReference("avatars").child(mAuth.getCurrentUser().getUid());
-                userAvatarReference.child("pants").setValue(shoes.get(i));
+                userAvatarReference.child("shoes").setValue(shoes.get(i));
                 // Page transition
                 startActivity(new Intent(ShoesActivity.this, BottomNaviActivity.class));
             }
@@ -74,6 +75,17 @@ public class ShoesActivity extends AppCompatActivity {
             }
         };
         goodsReference.addListenerForSingleValueEvent(goodsDataListener);
+
+        Button shoesBack = findViewById(R.id.shoesBack);
+        shoesBack.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.shoesBack:
+                startActivity(new Intent(ShoesActivity.this, BottomNaviActivity.class));
+        }
     }
 
 }

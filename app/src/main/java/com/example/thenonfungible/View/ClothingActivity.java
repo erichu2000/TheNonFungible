@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClothingActivity extends AppCompatActivity {
+public class ClothingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
@@ -73,5 +74,19 @@ public class ClothingActivity extends AppCompatActivity {
             }
         };
         goodsReference.addListenerForSingleValueEvent(goodsDataListener);
+
+        // Set up backButton
+        Button clothingBack = findViewById(R.id.clothingBack);
+        clothingBack.setOnClickListener(this);
+
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.clothingBack:
+                startActivity(new Intent(ClothingActivity.this, BottomNaviActivity.class));
+        }
     }
 }

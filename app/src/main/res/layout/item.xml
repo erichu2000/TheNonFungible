@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp">
-
-    <TextView
-        android:id="@+id/item_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"></TextView>
-
+        android:padding="5dp"
+        android:fontFamily="@font/nunito_bold">
 
     <ImageButton
         android:id="@+id/item_image"
@@ -24,24 +14,50 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:background="@null"
+        android:scaleType="fitXY"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/itemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Item Name: "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/teal_700"/>
 
     <TextView
         android:id="@+id/itemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/itemNameText"
+        android:layout_alignTop="@id/itemNameText"
         android:text="ItemName" />
+
+    <TextView
+        android:id="@+id/itemPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemNameText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/item_image"
+        android:text="Price: "
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/itemPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="50dp"
+        android:layout_alignTop="@id/itemPriceText"
+        android:layout_alignLeft="@id/itemName"
         android:text="Price"
-        android:textSize="12sp" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/sellButton"

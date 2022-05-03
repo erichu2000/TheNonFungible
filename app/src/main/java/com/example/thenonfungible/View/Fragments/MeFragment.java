@@ -51,7 +51,7 @@ public class MeFragment extends Fragment implements View.OnClickListener {
         ImageButton shoes = (ImageButton) view.findViewById(R.id.shoes);
 
         // Load image from database to ImageButton
-        DatabaseReference avatarReference = database.getReference().child("avatars");
+        DatabaseReference avatarReference = database.getReference("avatars");
         final ValueEventListener avatarsDataListener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -73,7 +73,8 @@ public class MeFragment extends Fragment implements View.OnClickListener {
                 }
                 if (!avatarExist) {
                     Avatar a = new Avatar(new Good(), new Good(), new Good());
-                    avatarReference.child(mAuth.getCurrentUser().getUid()).setValue(a);
+                    String currentUser = mAuth.getCurrentUser().getUid();
+                    database.getReference().child("avatars").child(currentUser).setValue(a);
                 }
             }
             @Override

@@ -4,29 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:padding="5dp"
+    android:fontFamily="@font/nunito_bold">
 
     <ImageButton
         android:id="@+id/itemDisplayButton"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:srcCompat="@tools:sample/avatars"
-        android:background="@null"/>
+        android:background="@null"
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/itemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/itemDisplayButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Item Name: "
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textColor="@color/teal_700"/>
 
     <TextView
         android:id="@+id/itemDisplayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
+        android:layout_alignTop="@+id/itemNameText"
+        android:layout_toRightOf="@+id/itemNameText"
+        android:text="ItemName"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/itemPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemDisplayName"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
-        android:text="ItemName" />
+        android:layout_toRightOf="@id/itemDisplayButton"
+        android:text="Price: "
+        android:textColor="@color/teal_700"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/itemDisplayPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@+id/itemDisplayName"
+        android:layout_alignTop="@id/itemPriceText"
         android:text="Price"
-        android:textSize="12sp" />
+        android:textSize="15sp" />
 </RelativeLayout>

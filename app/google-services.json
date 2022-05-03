@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "931619794928",
+    "firebase_url": "https://the-non-fungible-default-rtdb.firebaseio.com",
     "project_id": "the-non-fungible",
     "storage_bucket": "the-non-fungible.appspot.com"
   },

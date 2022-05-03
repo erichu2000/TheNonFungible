@@ -41,14 +41,6 @@
         <activity
             android:name=".View.ShoesActivity"
             android:exported="true"/>
-        <activity
-            android:name=".View.MeShowme"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".View.GetMineActivity"
-            android:exported="true"/>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

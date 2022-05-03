@@ -1,77 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".View.Fragments.InventoryFragment">
+    android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/selling"
-        android:layout_width="78dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/ic_baseline_shopping_cart_24"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-    <ImageButton
-        android:id="@+id/owned"
-        android:layout_width="71dp"
-        android:layout_height="76dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/ic_inventory"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="111dp"
-        android:layout_height="117dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/homelander"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="259dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/goodsrecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16sp" />
 
     <TextView
-        android:id="@+id/userTextView"
+        android:id="@+id/invLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="120dp"
-        android:text="Jerry"
-        tools:layout_editor_absoluteX="182dp"
-        tools:layout_editor_absoluteY="106dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16sp"
+        android:text="My Inventory"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="300dp"
-        android:text="Selling"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="237dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="300dp"
-        android:text="MyNFT"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="237dp" />
-
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/recycleInInv"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--     />-->
 
 </RelativeLayout>

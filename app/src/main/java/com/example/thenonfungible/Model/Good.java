@@ -8,22 +8,24 @@ public class Good {
     public String itemImageID;
     public String price;
     public String itemType; // {clothing, pants, shoes}
-    public boolean isOnSale;
+    public boolean onSale;
     public String ownerId; // same as "userId" in User class
+    public String onSale_name;
 
     public Good() {
 
     }
 
-    public Good(String goodId, String name, String description, String itemImageID, String price, String itemType, boolean isOnSale, String ownerId) {
+    public Good(String goodId, String name, String description, String itemImageID, String price, String itemType, boolean onSale, String ownerId, String onSale_name) {
         this.goodId = goodId;
         this.name = name;
         this.description = description;
         this.itemImageID = itemImageID;
         this.price = price;
         this.itemType = itemType;
-        this.isOnSale = isOnSale;
+        this.onSale = onSale;
         this.ownerId = ownerId;
+        this.onSale_name = onSale_name;
     }
 
     public String getGoodId() {
@@ -75,11 +77,11 @@ public class Good {
     }
 
     public boolean isOnSale() {
-        return isOnSale;
+        return onSale;
     }
 
     public void setOnSale(boolean onSale) {
-        isOnSale = onSale;
+        this.onSale = onSale;
     }
 
     public String getOwnerId() {
@@ -88,5 +90,13 @@ public class Good {
 
     public void setOwnerId(String ownerId) {
         this.ownerId = ownerId;
+    }
+
+    public String getOnSale_name() {
+        return onSale_name;
+    }
+
+    public void setOnSale_name(String onSale_name) {
+        this.onSale_name = onSale_name;
     }
 }

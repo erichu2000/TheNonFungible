@@ -45,7 +45,8 @@ public class ItemViewingActivity extends AppCompatActivity {
         TextView itemName = (TextView) findViewById(R.id.itemViewName);
         TextView itemPrice = (TextView) findViewById(R.id.itemPrice);
         TextView specificDescription = (TextView) findViewById(R.id.specificDescription);
-        ImageButton purchaseBtn = (ImageButton) findViewById(R.id.puchaseButton);
+        Button purchaseBtn = (Button) findViewById(R.id.puchaseButton);
+        Button backBtn = (Button) findViewById(R.id.viewingBack);
 
         itemName.setText(extras.getString("itemName"));
         itemPrice.setText(extras.getString("itemPrice"));
@@ -71,8 +72,15 @@ public class ItemViewingActivity extends AppCompatActivity {
                     }
                 }
             });
+            Intent i = new Intent(ItemViewingActivity.this, BottomNaviActivity.class);
+            i.putExtra("fromItemViewing", "2");
+            startActivity(i);
+        });
 
-            startActivity(new Intent(ItemViewingActivity.this, BottomNaviActivity.class));
+        backBtn.setOnClickListener(view -> {
+            Intent i = new Intent(ItemViewingActivity.this, BottomNaviActivity.class);
+            i.putExtra("fromItemViewing", "2");
+            startActivity(i);
         });
 
 

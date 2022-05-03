@@ -1,7 +1,6 @@
 package com.example.thenonfungible.View;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,60 +18,67 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    private  static final String Tag = "RecyclerView";
+public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.ViewHolder> {
     private Context mContext;
-    private ArrayList<Good> goodList;
+    private List<Good> goodList;
     private DatabaseReference myRef;
 
-    public RecyclerAdapter(Context mContext, ArrayList<Good> goodList){
+    public InventoryAdapter(Context mContext, List<Good> goodList){
         this.mContext = mContext;
         this.goodList = goodList;
 
     }
     @NonNull
     @Override
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public InventoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
-        return  new ViewHolder(view) ;
+        return new ViewHolder(view) ;
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull InventoryAdapter.ViewHolder holder, int position) {
         holder.textNameView.setText(goodList.get(position).getName());
         holder.textPriceView.setText(goodList.get(position).getPrice());
-        Boolean isOnsale = goodList.get(position).isOnSale;
+        boolean onSale = goodList.get(position).isOnSale();
         String goodId = goodList.get(position).getGoodId();
-        if (isOnsale){
-            holder.sellButton.setClickable(false);
-            holder.sellButton.setEnabled(false);
-            holder.stopSellButton.setClickable(true);
-            holder.stopSellButton.setEnabled(true);
+        String goodName = goodList.get(position).getName();
+        if (onSale){
+            setButtonStatus(holder.sellButton, false);
+            setButtonStatus(holder.stopSellButton, true);
         }
         else{
-            holder.sellButton.setClickable(true);
-            holder.sellButton.setEnabled(true);
-            holder.stopSellButton.setClickable(false);
-            holder.stopSellButton.setEnabled(false);
+            setButtonStatus(holder.sellButton, true);
+            setButtonStatus(holder.stopSellButton, false);
         }
         myRef = FirebaseDatabase.getInstance().getReference();
         holder.sellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myRef.child("goods").child(goodId).child("isOnSale").setValue(true);
+                myRef.child("goods").child(goodId).child("onSale").setValue(true);
+                myRef.child("goods").child(goodId).child("onSale_name").setValue("true_" + goodName);
+                setButtonStatus(holder.sellButton, false);
+                setButtonStatus(holder.stopSellButton, true);
             }
         });
 
         holder.stopSellButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myRef.child("goods").child(goodId).child("isOnSale").setValue(false);
+                myRef.child("goods").child(goodId).child("onSale").setValue(false);
+                myRef.child("goods").child(goodId).child("onSale_name").setValue("false_" + goodName);
+                setButtonStatus(holder.sellButton, true);
+                setButtonStatus(holder.stopSellButton, false);
             }
         });
-
         Glide.with(mContext).load(goodList.get(position).getItemImageID()).into(holder.imageView);
+    }
+
+    private void setButtonStatus(Button button, boolean status) {
+        button.setClickable(status);
+        button.setEnabled(status);
     }
 
     @Override
@@ -80,7 +86,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         return goodList.size();
     }
 
-    public  class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textNameView;
         TextView textPriceView;
@@ -94,7 +100,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             textPriceView = itemView.findViewById(R.id.itemPrice);
             sellButton = itemView.findViewById(R.id.sellButton);
             stopSellButton = itemView.findViewById(R.id.stopSellButton);
-
         }
     }
 }

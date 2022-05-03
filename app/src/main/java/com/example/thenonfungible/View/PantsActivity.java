@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PantsActivity extends AppCompatActivity {
+public class PantsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
@@ -74,10 +75,17 @@ public class PantsActivity extends AppCompatActivity {
             }
         };
         goodsReference.addListenerForSingleValueEvent(goodsDataListener);
+
+        Button pantsBack = findViewById(R.id.pantsBack);
+        pantsBack.setOnClickListener(this);
     }
 
 
-
-
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.pantsBack:
+                startActivity(new Intent(PantsActivity.this, BottomNaviActivity.class));
+        }
+    }
 }
