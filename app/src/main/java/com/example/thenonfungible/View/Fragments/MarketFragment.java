@@ -28,6 +28,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import java.util.Locale;
+
 public class MarketFragment extends Fragment implements View.OnClickListener {
 
     private EditText mSearchField;
@@ -68,12 +70,13 @@ public class MarketFragment extends Fragment implements View.OnClickListener {
     }
 
     private void fireBaseSearch(String searchName) {
-        FirebaseRecyclerOptions<Good> options = new FirebaseRecyclerOptions.Builder<Good>().setQuery(mGoodDatabase.orderByChild("onSale_name").startAt("true_" + searchName).endAt("true_" + searchName + "\uf8ff"), Good.class).build();
+        FirebaseRecyclerOptions<Good> options = new FirebaseRecyclerOptions.Builder<Good>().setQuery(mGoodDatabase.orderByChild("onSale_name").startAt("true_" + searchName.toLowerCase()).endAt("true_" + searchName.toLowerCase() + "\uf8ff"), Good.class).build();
 
         FirebaseRecyclerAdapter firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Good, GoodsViewHolder>(options) {
 
             @Override
             protected void onBindViewHolder(@NonNull GoodsViewHolder holder, int position, @NonNull Good model) {
+                holder.setDetails(getActivity(), model.getName(), model.getPrice(), model.getItemImageID(), model.getDescription(), model.getGoodId());
                 holder.setDetails(getActivity(), model.getName(), model.getPrice(), model.getItemImageID(), model.getDescription(), model.getGoodId());
             }
 
